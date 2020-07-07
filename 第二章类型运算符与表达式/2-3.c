@@ -3,11 +3,11 @@
 int htoi(char s[])
 {
     int num = 0, begin = 0;
-    for(int i = 0; s[i] != '\0'; ++i)
+    for (int i = 0; s[i] != '\0'; ++i)
     {
-        if(begin == 1)
+        if (begin == 1)
         {
-            if(s[i] >= '0' && s[i] <= '9')
+            if (s[i] >= '0' && s[i] <= '9')
             {
                 num = num * 16 + (s[i] - '0');
             }
@@ -20,7 +20,7 @@ int htoi(char s[])
                 num = num * 16 + (s[i] - 'A') + 10;
             }
         }
-        else if((s[i] == 'x' || s[i] == 'X') && s[i-1] == '0')
+        else if ((s[i] == 'x' || s[i] == 'X') && s[i-1] == '0')
         {
             begin = 1;
         }
@@ -32,7 +32,7 @@ int main()
 {
     char hex[1024];
     int i, c;
-    for(i = 0; i < 1023 && (c = getchar()) != '\n' && c != EOF; ++i)
+    for (i = 0; i < 1023 && (c = getchar()) != '\n' && c != EOF; ++i)
     {
         hex[i] = (char)c;
     }

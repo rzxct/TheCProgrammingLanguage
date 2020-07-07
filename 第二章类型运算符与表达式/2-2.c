@@ -3,9 +3,9 @@
 int getline(char s[], int lim)
 {
     int c, i;
-    for(i = 0; i < lim - 1; ++i)
+    for (i = 0; i < lim - 1; ++i)
     {
-        if((c = getchar()) == '\n')
+        if ((c = getchar()) == '\n')
         {
             break;
         }
@@ -18,7 +18,7 @@ int getline(char s[], int lim)
             s[i] = (char)c;
         }
     }
-    if(c == '\n')
+    if (c == '\n')
     {
         s[i++] = '\n';
     }
